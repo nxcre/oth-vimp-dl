@@ -28,7 +28,7 @@
     var vTitle = document.getElementById("p_video").getElementsByTagName("img")[0].title;
     var vURL = document.getElementById("p_video").getElementsByTagName("source")[0].src;
 
-    // Get the date dtring with leading 0
+    // Get the date string with leading 0
     var textDate = document.getElementsByClassName("uploader clearfix")[0].children[2].innerHTML.substr(40);
     if (textDate.charAt(1)=="."){
         textDate = "0" + textDate;
