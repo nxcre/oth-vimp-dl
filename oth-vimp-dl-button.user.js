@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OTH ViMP Video DL Button
 // @namespace    https://github.com/nxcre/oth-vimp-dl
-// @version      0.5
+// @version      0.6
 // @description  Adds a download button below and renames the video appropiately.
 // @description:de  Fuegt einen Download Button unter dem Video hinzu und benennt es passend um.
 // @author       nxcre
@@ -22,6 +22,9 @@
     var autoDownload = false;
     var highlighted = false;
 
+    if(debug) {
+        console.log("Debug Log for oth-vimp-dl-button.user.js:");
+    }
     var vTitle = document.getElementById("p_video").getElementsByTagName("img")[0].title;
     var vURL = document.getElementById("p_video").getElementsByTagName("source")[0].src;
 
@@ -83,7 +86,7 @@
     var vDate = isoyear + sep + isomonth + sep + isoday;
 
     if(debug) {
-        console.log("Debug: " + debug
+        console.log("\n Debug: " + debug
                     + "\n AutoDownload:  " + autoDownload
                     + "\n Highlighted:  " + highlighted
                     + "\n\n Video Title:  " + vTitle
