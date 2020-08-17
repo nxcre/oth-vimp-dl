@@ -2,8 +2,12 @@
 // @name         OTH ViMP Video DL Button
 // @namespace    https://github.com/nxcre/oth-vimp-dl
 // @version      0.5
-// @description  Fuegt einen Download Button unter dem Video hinzu und benennt das Video um.
+// @description  Adds a download button below and renames the video appropiately.
+// @description:de  Fuegt einen Download Button unter dem Video hinzu und benennt es passend um.
 // @author       nxcre
+// @license      MIT License
+// @downloadURL  https://github.com/nxcre/oth-vimp-dl/raw/master/oth-vimp-dl-button.user.js
+// @updateURL    https://github.com/nxcre/oth-vimp-dl/raw/master/oth-vimp-dl-button.user.js
 // @match        https://vimp.oth-regensburg.de/*
 // @grant        GM_setClipboard
 // @grant        GM_download
