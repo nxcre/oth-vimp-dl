@@ -1,6 +1,6 @@
 # OTH ViMP Video DL Button
 This Tampermonkey script lets you comfortably download videos from vimp.oth-regensburg.de.
-It adds a download button and renames the file to the video title.
+It adds a download button and renames the file to the upload date and video title.
 
 ## Installation
 For use with [Tampermonkey (Firefox)](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) or [Tampermonkey (Chrome)](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
