@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         OTH ViMP Video DL Button
 // @namespace    https://github.com/nxcre/oth-vimp-dl
-// @version      0.6
+// @version      0.7
 // @description  Adds a download button below and renames the video appropiately.
 // @description:de  Fuegt einen Download Button unter dem Video hinzu und benennt es passend um.
 // @author       nxcre
 // @license      MIT License
 // @downloadURL  https://github.com/nxcre/oth-vimp-dl/raw/master/oth-vimp-dl-button.user.js
 // @updateURL    https://github.com/nxcre/oth-vimp-dl/raw/master/oth-vimp-dl-button.user.js
-// @match        https://vimp.oth-regensburg.de/*
+// @match        https://vimp.oth-regensburg.de/video/*
 // @grant        GM_setClipboard
 // @grant        GM_download
 // @grant        GM_addStyle
@@ -86,22 +86,22 @@
     var vDate = isoyear + sep + isomonth + sep + isoday;
 
     if(debug) {
-        console.log("\n Debug: " + debug
-                    + "\n AutoDownload:  " + autoDownload
-                    + "\n Highlighted:  " + highlighted
-                    + "\n\n Video Title:  " + vTitle
-                    + "\n Video URL:  " + vURL
-                    + "\n Date:  " + vDate
-                    + "\n\n textDate:  " + textDate
-                    + "\n isoDay:  " + isoday
-                    + "\n isoMonth:  " + isomonth
-                    + "\n isoYear:  " + isoyear);
+        console.log("\n Debug: \t" + debug
+                    + "\n AutoDownload: \t" + autoDownload
+                    + "\n Highlighted:  \t" + highlighted
+                    + "\n\n Video Title:  \t" + vTitle
+                    + "\n Video URL:  \t" + vURL
+                    + "\n Date:  \t" + vDate
+                    + "\n\n textDate:  \t" + textDate
+                    + "\n isoDay:  \t" + isoday
+                    + "\n isoMonth:  \t" + isomonth
+                    + "\n isoYear:  \t" + isoyear);
     }
 
     // Download the video automatically right after loading the page
     if(autoDownload) {
         if(debug) {
-            console.log("\nStart Downloading: \"" + vDate + " " + vTitle + ".mp4\" - From URL: " + vURL);
+            console.log("\nStart Downloading:  \"" + vDate + " " + vTitle + ".mp4\" - From URL: " + vURL);
         }
         GM_download(vURL, vDate + " " + vTitle + ".mp4");
     }
@@ -111,7 +111,7 @@
     vimpDLNode.innerHTML = vimpDLNode.innerHTML + '<a id="vimpDLButton" class="btn" href="' + vURL + '" download="' + vDate + ' ' + vTitle + '.mp4">DOWNLOAD</a>';
 
     if(debug) {
-        console.log("\n\n vimpDLNode:  " + vimpDLNode);
+        console.log("\n vimpDLNode:  \t" + vimpDLNode);
     }
 
     // Highlight the newly added button
